@@ -1,3 +1,4 @@
+/* Modernized CSS Theme */
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +6,21 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #181818;
-  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f9;
+  color: #1a1a1a;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 header {
-  background: #222;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
-  text-align: center;
+  z-index: 1000;
 }
 
 nav ul {
@@ -30,107 +32,100 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: rgb(221, 221, 221);
-  font-weight: 600;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #00d084;
+  color: #007BFF;
 }
-
-.section {
-  padding: 100px 20px 60px;
-  min-height: 80vh;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-}
-.abt{
-    font-family: 'Poppins', sans-serif;
-    font-size:20px ;
-}
-
-ul {
+.cir_grid {
   list-style-type: disc;
   padding-left: 20px;
   text-align: left;
   display: inline-block;
 }
 
+.section {
+  padding: 120px 20px 60px;
+  min-height: 80vh;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+
 form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
-  gap: 10px;
+  gap: 15px;
 }
 
 input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background: #2a2a2a;
-  color: white;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 button {
-  padding: 10px;
-  background: rgb(0, 208, 132);
+  padding: 12px;
+  background: #007BFF;
   border: none;
-  border-radius: 4px;
-  color: black;
-  font-weight: 600;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
   cursor: pointer;
 }
 
 button:hover {
-  background: rgb(0, 208, 132);
+  background: #0056b3;
 }
 
 footer {
-  background: #222;
+  background: #fff;
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #888;
+  border-top: 1px solid #ddd;
 }
 
-/* Minimal animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
 .image-text-container {
   display: flex;
-  align-items: center;      /* Vertically center */
-  gap: 20px;                /* Space between image and text */
-  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px;
 }
 
 .left-image {
-  width: 300px;             /* Set image width */
-  height: 450px;
-  border-radius: 8px;
-  margin-left:250px;
-  
-         /* Optional: rounded corners */
+  width: 280px;
+  height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .right-text {
-  flex: 1;                  /* Take remaining space */
-  font-family: Arial, sans-serif;
+  max-width: 500px;
+  text-align: left;
 }
+
 .skills-container {
   max-width: 600px;
   margin: auto;
@@ -151,20 +146,30 @@ footer {
   background-color: #007BFF;
   transition: width 1s ease;
 }
+
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  text-align: right;
-  top: 0;
-  position: fixed;
-  padding-right: 1rem;
+
+table, th, td {
+  border: 1px solid #ddd;
 }
-@media screen and (max-width: 768px) {
-  .menu-toggle{
-    display: block;
-     width: 100%;  
-  }
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.info-box p {
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
